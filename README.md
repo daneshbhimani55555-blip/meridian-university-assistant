@@ -1,11 +1,35 @@
 # Meridian University — Enterprise RAG Assistant (Module 08)
 
-A complete classroom prototype for the Bano Qabil Generative AI Module 08 assignment. It uses five fictional knowledge documents, local sentence-transformer embeddings, Chroma vector storage, Gemini API generation, and a Streamlit interface.
+A complete classroom prototype for the Bano Qabil Generative AI Module 08 assignment. It uses fictional knowledge documents (five core files plus an extended data file), local sentence-transformer embeddings, Chroma vector storage, Gemini API generation, and a Streamlit interface.
+
+## Quick start — run the assistant in 2 ways
+
+| Method | Best for | Guide |
+|---|---|---|
+| **Google Colab** (no installation) | Quickest way to try it in the browser | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/daneshbhimani55555-blip/meridian-university-assistant/blob/main/Meridian_Assistant_Colab.ipynb) |
+| **VS Code** (on your own computer) | Development and editing the data | [VSCODE_GUIDE.md](VSCODE_GUIDE.md) |
+
+**Colab in short:** open the notebook above → add your Gemini key in Colab *Secrets* (name `GEMINI_API_KEY`) → run the cells from top to bottom.
+
+**VS Code in short:**
+```bash
+git clone https://github.com/daneshbhimani55555-blip/meridian-university-assistant.git
+cd meridian-university-assistant
+python -m venv .venv && .venv\Scripts\activate      # macOS/Linux: source .venv/bin/activate
+pip install -r requirements.txt
+# create .env from .env.example and add your GEMINI_API_KEY
+python ingest.py
+streamlit run app.py
+```
+
+> The API key is never stored in this repository. `.env` is excluded by `.gitignore`.
+
+**Adding more knowledge:** put any new `.md` file in the `data/` folder (for example `MERIDIAN_UNI_ASSISTANT_DATA.md`) and run `python ingest.py` again so the index is rebuilt.
 
 ## Project structure
 
 ```text
-meridian_university_knowledge_base/
+meridian-university-assistant/
 ├── app.py
 ├── rag.py
 ├── ingest.py
@@ -14,7 +38,9 @@ meridian_university_knowledge_base/
 ├── requirements.txt
 ├── .env.example
 ├── .gitignore
-├── data/                         # five knowledge documents
+├── VSCODE_GUIDE.md
+├── Meridian_Assistant_Colab.ipynb
+├── data/                         # knowledge documents (.md), incl. MERIDIAN_UNI_ASSISTANT_DATA.md
 ├── tests/test_set_20_questions.csv
 └── reports/
     ├── retrieval_experiment_template.csv
@@ -32,7 +58,6 @@ meridian_university_knowledge_base/
 Windows PowerShell:
 
 ```powershell
-cd meridian_university_knowledge_base
 py -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
@@ -41,7 +66,6 @@ pip install -r requirements.txt
 macOS/Linux:
 
 ```bash
-cd meridian_university_knowledge_base
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
