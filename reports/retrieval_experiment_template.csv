@@ -1,0 +1,22 @@
+﻿question_id,experiment,chunk_size,chunk_overlap,question,k,expected_sources,retrieved_sources,required_evidence_retrieved,irrelevant_evidence_retrieved,final_answer_correct,run_status,notes
+E1,baseline,850,140,What are the help desk opening hours?,1,01_company_overview.md,,,,,NOT RUN,Run python evaluate_retrieval.py; inspect chunks and manually assess answer.
+E1,baseline,850,140,What are the help desk opening hours?,3,01_company_overview.md,,,,,NOT RUN,Run python evaluate_retrieval.py; inspect chunks and manually assess answer.
+E1,baseline,850,140,What are the help desk opening hours?,5,01_company_overview.md,,,,,NOT RUN,Run python evaluate_retrieval.py; inspect chunks and manually assess answer.
+E2,baseline,850,140,What is the tuition for Web Development?,1,02_programs_and_services.md,,,,,NOT RUN,Run python evaluate_retrieval.py; inspect chunks and manually assess answer.
+E2,baseline,850,140,What is the tuition for Web Development?,3,02_programs_and_services.md,,,,,NOT RUN,Run python evaluate_retrieval.py; inspect chunks and manually assess answer.
+E2,baseline,850,140,What is the tuition for Web Development?,5,02_programs_and_services.md,,,,,NOT RUN,Run python evaluate_retrieval.py; inspect chunks and manually assess answer.
+E3,baseline,850,140,What is the total first payment for Web Development and when is tuition due?,1,02_programs_and_services.md;03_current_student_policy.md,,,,,NOT RUN,Run python evaluate_retrieval.py; inspect chunks and manually assess answer.
+E3,baseline,850,140,What is the total first payment for Web Development and when is tuition due?,3,02_programs_and_services.md;03_current_student_policy.md,,,,,NOT RUN,Run python evaluate_retrieval.py; inspect chunks and manually assess answer.
+E3,baseline,850,140,What is the total first payment for Web Development and when is tuition due?,5,02_programs_and_services.md;03_current_student_policy.md,,,,,NOT RUN,Run python evaluate_retrieval.py; inspect chunks and manually assess answer.
+E4,baseline,850,140,Compare the old and current refund percentage and notice period.,1,03_current_student_policy.md;04_archived_student_policy.md,,,,,NOT RUN,Run python evaluate_retrieval.py; inspect chunks and manually assess answer.
+E4,baseline,850,140,Compare the old and current refund percentage and notice period.,3,03_current_student_policy.md;04_archived_student_policy.md,,,,,NOT RUN,Run python evaluate_retrieval.py; inspect chunks and manually assess answer.
+E4,baseline,850,140,Compare the old and current refund percentage and notice period.,5,03_current_student_policy.md;04_archived_student_policy.md,,,,,NOT RUN,Run python evaluate_retrieval.py; inspect chunks and manually assess answer.
+E5,baseline,850,140,What should a student do if a class resource is missing?,1,05_operations_faq_and_test_notes.md,,,,,NOT RUN,Run python evaluate_retrieval.py; inspect chunks and manually assess answer.
+E5,baseline,850,140,What should a student do if a class resource is missing?,3,05_operations_faq_and_test_notes.md,,,,,NOT RUN,Run python evaluate_retrieval.py; inspect chunks and manually assess answer.
+E5,baseline,850,140,What should a student do if a class resource is missing?,5,05_operations_faq_and_test_notes.md,,,,,NOT RUN,Run python evaluate_retrieval.py; inspect chunks and manually assess answer.
+E6,baseline,850,140,What percentage sibling discount is offered?,1,05_operations_faq_and_test_notes.md,,,,,NOT RUN,Run python evaluate_retrieval.py; inspect chunks and manually assess answer.
+E6,baseline,850,140,What percentage sibling discount is offered?,3,05_operations_faq_and_test_notes.md,,,,,NOT RUN,Run python evaluate_retrieval.py; inspect chunks and manually assess answer.
+E6,baseline,850,140,What percentage sibling discount is offered?,5,05_operations_faq_and_test_notes.md,,,,,NOT RUN,Run python evaluate_retrieval.py; inspect chunks and manually assess answer.
+E1,smaller_chunks,500,80,What are the help desk opening hours?,5,01_company_overview.md,,,,,NOT RUN,Compare with baseline; same question and documents.
+E2,smaller_chunks,500,80,What is the tuition for Web Development?,5,02_programs_and_services.md,,,,,NOT RUN,Compare with baseline; same question and documents.
+E3,smaller_chunks,500,80,What is the total first payment for Web Development and when is tuition due?,5,02_programs_and_services.md;03_current_student_policy.md,,,,,NOT RUN,Compare with baseline; same question and documents.
